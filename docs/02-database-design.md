@@ -78,6 +78,6 @@ The database was then used to build the forms and management interfaces used wit
 
 ---
 
-## Next Section
+## Next
 
 Continue to [03 - Application Interface](03-application-interface.md) to see how the database was used to build the application's menus, forms and management interfaces.
