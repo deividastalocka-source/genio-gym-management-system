@@ -75,3 +75,9 @@ The table uses references to other records such as clients, instructors, gyms an
 The database structure provides the foundation of the Gym Management System. Separating information into individual tables makes the data easier to organise while relationships between the tables allow information to be connected throughout the application.
 
 The database was then used to build the forms and management interfaces used within the completed system.
+
+---
+
+## Next Section
+
+Continue to [03 - Application Interface](03-application-interface.md) to see how the database was used to build the application's menus, forms and management interfaces.
