@@ -1,92 +1,88 @@
-# 02 — Database Design
+# Database Design
 
 ## Overview
 
-The Genio Gym Management System was designed around a relational data model that connects the different types of information required by the application.
+The Gym Management System was designed around a relational database structure created in Genio. The database stores information about clients, employees, gyms, instructors, exercises, workout types and workout plans.
 
-The database structure was created before implementing the system in Genio and was used as the foundation for the application's tables, forms and relationships.
+The tables are connected using primary and foreign keys so that related information can be referenced across the system without unnecessary duplication.
 
 ## Database Model
 
-![Genio Gym Management System Database Model](../diagrams/Database-Model.png)
+The database model shows the main tables used by the system and the relationships between them.
 
-The editable source diagram is also available here:
+![Database Model](../diagrams/Database-Model.png)
 
-[Database Model — Draw.io Source](../diagrams/Database-Model.drawio)
+The main tables are:
 
-## Main Data Areas
+- Client
+- Employee
+- Exercise
+- Gym
+- Instructor
+- Workout Type
+- Workout Plan
 
-The system was structured around several main areas of gym information:
+Each table was created to store a specific type of information required by the gym management system.
+
+## Table Structure
+
+The tables were configured within Genio with fields for storing the required data. Primary keys were used to uniquely identify records, while foreign keys were used where information from another table needed to be referenced.
+
+### Exercise
+
+The Exercise table stores exercises available within the system.
+
+![Exercise Table](../screenshots/17%20-%20Exercise%20Table.png)
+
+The table includes an exercise code, workout type reference and exercise name. The workout type is linked through a foreign key.
+
+### Workout Type
+
+The Workout Type table stores the different categories of workouts available within the system.
+
+This allows exercises and workout plans to be associated with a particular workout type.
+
+### Instructor
+
+The Instructor table stores information about gym instructors.
+
+![Instructor Table](../screenshots/19%20-%20Instructor%20Table.png)
+
+Information stored includes the instructor's name, date of birth, average salary and specialty.
+
+### Workout Plan
+
+The Workout Plan table brings together information from several parts of the database.
+
+![Workout Plan Table](../screenshots/20%20-%20Workout%20Plan%20Table.png)
+
+Foreign keys are used to connect a workout plan with:
+
+- A client
+- An instructor
+- A gym
+- A workout type
+
+The table also stores information such as the start date, end date, number of sessions per week and workout duration.
+
+This structure allows a workout plan to reference existing records instead of storing the same client, instructor, gym and workout information repeatedly.
+
+## Forms
+
+Forms were created in Genio to provide a structured interface for viewing and entering information stored within the database.
+
+The project contains forms for:
 
 - Clients
 - Employees
-- Instructors
-- Gyms
 - Exercises
+- Gyms
+- Instructors
 - Workout Types
 - Workout Plans
 
-Each area stores information required for a particular part of the system while relationships allow information to be shared between them.
+The complete list of forms can be viewed within Genio:
 
-## Clients
+![Forms List](../screenshots/22%20-%20Forms%20List.png)
 
-Client records store information relating to gym members, including:
-
-- Name
-- Date of birth
-- Membership type
-- Due payments
-
-Client information can then be referenced when creating workout plans.
-
-## Employees and Instructors
-
-Employee records store information such as the employee's role, salary and date of birth.
-
-Instructor records contain information specific to gym instructors, including their specialty.
-
-This allows instructors to be associated with workout plans created for clients.
-
-## Gyms
-
-Gym records contain the name and location of each gym.
-
-These records allow other areas of the system to associate information with a particular gym location.
-
-## Exercises and Workout Types
-
-Exercises and workout types provide the information required to organise the different forms of exercise available within the system.
-
-These records can then be referenced when building workout plans.
-
-## Workout Plans
-
-The workout plan structure brings information from multiple areas of the system together.
-
-A workout plan can contain information such as:
-
-- Client
-- Instructor
-- Workout type
-- Start date
-- End date
-- Workout frequency
-- Workout duration
-
-Relationships between the underlying data allow these records to reference information already stored elsewhere in the system rather than duplicating it.
-
-## Data Validation
-
-Some fields were configured as required fields.
-
-This prevents a user from completing certain records without entering essential information. For example, the client field within a workout plan was made mandatory.
-
-## Design Outcome
-
-The relational structure provided a foundation for the rest of the application by allowing related business information to be organised and connected within the system.
-
-The design was then implemented in Genio and used to build the application's tables, forms and user-facing functionality.
-
-## Next
-
-Continue to [03 — Authentication and User Roles](03-authentication-and-user-roles.md).
+These forms provide the user-facing interface for working with the underlying database tables.
