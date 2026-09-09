@@ -10,7 +10,7 @@ The tables are connected using primary and foreign keys so that related informat
 
 The database model shows the main tables used by the system and the relationships between them.
 
-![Database Model](../diagrams/Database-Model.png)
+![Database Model](../diagrams/Database Model.png)
 
 The main tables are:
 
