@@ -2,13 +2,13 @@
 
 ## Overview
 
-The Gym Management System was built using a relational database structure in Genio. The database was designed to organise information about clients, employees, instructors, gyms and workout plans.
+The Gym Management System was built using a relational database structure in Genio. The database was designed to organise information about clients, employees, gyms, instructors, workout plans, workout types and exercises.
 
-Primary and foreign keys were used to connect related information between the tables.
+Primary and foreign keys were used to connect related information between the tables and allow data to be reused throughout the system.
 
 ## Database Model
 
-The database model contains five main tables:
+The database model focuses on five main tables:
 
 - Client
 - Employee
@@ -18,32 +18,60 @@ The database model contains five main tables:
 
 ![Database Model](../diagrams/Database%20Model.png)
 
-The model shows how the main parts of the system are connected. The Workout Plan table acts as an important part of the database because it references information stored in other tables.
+These tables represent the main entities used to manage clients, staff, gym locations, instructors and workout plans.
 
-## Client Table
+## Database Tables
 
-The Client table stores information about gym clients, including details required to manage their membership and workout plans.
+The tables were created and configured within Genio.
 
-## Employee Table
+![Database Tables Overview](../screenshots/14%20-%20Database%20Tables%20Overview.png)
+
+### Client Table
+
+The Client table stores information about gym clients.
+
+![Client Table Fields](../screenshots/15%20-%20Client%20Table%20Fields.png)
+
+### Employee Table
 
 The Employee table stores information about employees working within the gym.
 
-## Gym Table
+![Employee Table Fields](../screenshots/16%20-%20Employee%20Table%20Fields.png)
+
+### Exercise Table
+
+The Exercise table stores exercises used within the system and links them to workout types.
+
+![Exercise Table](../screenshots/17%20-%20Exercise%20Table.png)
+
+### Gym Table
 
 The Gym table stores information about gym locations.
 
-## Instructor Table
+![Gym Table](../screenshots/18%20-%20Gym%20Table.png)
 
-The Instructor table stores information about instructors, including their personal and employment information.
+### Workout Type Table
 
-## Workout Plan Table
+The Workout Type table stores the different workout categories available within the system.
 
-The Workout Plan table connects information from other parts of the system to create a workout plan for a client.
+![Workout Type Table](../screenshots/19%20-%20Workout%20Type%20Table.png)
 
-It can reference records such as the client, instructor and gym through foreign keys. This allows the system to reuse existing information instead of duplicating it across multiple records.
+### Instructor Table
 
-## Database Implementation
+The Instructor table stores information about gym instructors.
 
-The database structure was implemented within Genio, where the tables, fields, primary keys and foreign-key relationships were configured.
+![Instructor Table](../screenshots/20%20-%20Instructor%20Table.png)
 
-The completed database structure provided the foundation for the forms and other functionality developed later in the project.
+### Workout Plan Table
+
+The Workout Plan table connects information from different parts of the system to create a structured workout plan for a client.
+
+![Workout Plan Table](../screenshots/21%20-%20Workout%20Plan%20Table.png)
+
+The table uses references to other records such as clients, instructors, gyms and workout types. It also stores information relating to the workout schedule.
+
+## Summary
+
+The database structure provides the foundation of the Gym Management System. Separating information into individual tables makes the data easier to organise while relationships between the tables allow information to be connected throughout the application.
+
+The database was then used to build the forms and management interfaces used within the completed system.
